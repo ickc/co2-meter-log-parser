@@ -1,6 +1,6 @@
 # Info
 
-Supporting model: [Indoor CO2 Meter, Air Quality Monitor, Data Logger with NDIR Channel Sensor](https://www.amazon.com/dp/B0919CDYQ1?ref=ppx_yo2ov_dt_b_product_details&th=1). May also support [GZAIR CO2 Data Logger Monitor](https://www.amazon.com/gp/product/B0829ZWQVP/ref=ox_sc_act_title_1?smid=A5ATT5KW6GHNF&th=1) where the former seems to be a white label version of latter one.
+Supporting model: [Indoor CO2 Meter, Air Quality Monitor, Data Logger with NDIR Channel Sensor](https://www.amazon.com/dp/B0919CDYQ1). May also support [GZAIR CO2 Data Logger Monitor](https://www.amazon.com/gp/product/B0829ZWQVP) where the former seems to be a white label version of latter one.
 
 # Usage
 
@@ -10,3 +10,5 @@ Supporting model: [Indoor CO2 Meter, Air Quality Monitor, Data Logger with NDIR 
 -   CO~2~ meter: History > Reset
 -   `make rename` to rename `DATALOG.TXT` automatically.
 -   Run `plot.ipynb` to explore.
+
+Notes: you need to backup the data in the `log` directory yourself. It is git-ignored to not included here.
