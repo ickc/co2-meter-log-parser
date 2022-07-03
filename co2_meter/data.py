@@ -49,7 +49,7 @@ class Data:
             },
             index=dt,
         )
-        df.sort_index(inplace=True)
+        assert df.index.is_monotonic_decreasing
         return Data(
             df,
             units,
@@ -57,14 +57,17 @@ class Data:
 
     @classmethod
     def from_dir(cls, directory: Path, ext: str = "csv") -> Data:
-        datas = [Data.from_file(path) for path in directory.glob(f"*.{ext}")]
+        datas = [
+            Data.from_file(path)
+            for path in sorted(directory.glob(f"*.{ext}"), reverse=True)
+        ]
         units = datas[0].units
         dfs = []
         for data in datas:
             assert data.units == units
             dfs.append(data.dataframe)
         df = pd.concat(dfs, axis=0)
-        df.sort_index(inplace=True)
+        assert df.index.is_monotonic_decreasing
         return Data(df, units)
 
     @property
