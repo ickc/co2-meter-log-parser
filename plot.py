@@ -23,8 +23,6 @@ from co2_meter.data import Data
 pd.options.plotting.backend = "plotly"
 
 # %%
-
-# %%
 path = Path("log")
 
 # %%
