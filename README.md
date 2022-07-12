@@ -4,7 +4,7 @@ Supporting model: [Indoor CO2 Meter, Air Quality Monitor, Data Logger with NDIR 
 
 # Usage
 
--   CO~2~ meter: History > Data Log Table > Save to file
+-   With CO~2~ meter not plugged in a computer (so that the filesystem is not mounted): History > Data Log Table > Save to file
 -   Plug CO~2~ meter to computer.
 -   Copy `DATALOG.TXT` to `log`.
 -   CO~2~ meter: History > Reset
