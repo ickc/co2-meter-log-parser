@@ -72,15 +72,15 @@ class Data:
 
     @property
     def duration(self) -> pd.Timedelta:
-        return self.dataframe.index[-1] - self.dataframe.index[0]
+        return self.dataframe.index[0] - self.dataframe.index[-1]
 
     @property
     def start_time(self) -> str:
-        return self.strftime(self.dataframe.index[0])
+        return self.strftime(self.dataframe.index[-1])
 
     @property
     def end_time(self) -> str:
-        return self.strftime(self.dataframe.index[-1])
+        return self.strftime(self.dataframe.index[0])
 
     @staticmethod
     def strftime(dt: np.datetime64) -> str:
