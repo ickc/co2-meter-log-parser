@@ -67,7 +67,11 @@ class Data:
             assert data.units == units
             dfs.append(data.dataframe)
         df = pd.concat(dfs, axis=0)
-        assert df.index.is_monotonic_decreasing
+
+        # 2 files can have overlapping time ranges
+        df.drop_duplicates(inplace=True)
+        df.sort_index(inplace=True, ascending=False)
+
         return Data(df, units)
 
     @property
