@@ -12,3 +12,14 @@ Supporting model: [Indoor CO2 Meter, Air Quality Monitor, Data Logger with NDIR 
 -   Run `plot.ipynb` to explore.
 
 Notes: you need to backup the data in the `log` directory yourself. It is git-ignored to not included here.
+
+# Notes on calibration
+
+The menu suggests leaving it to open air for 20 min. before calibration.
+
+At calibration, it assumes current level is 400 ppm.
+
+An offset can be configure too. To find your offset, you can check local CO~2~ level, such as from these sites:
+
+* [Daily CO2](https://www.co2.earth/daily-co2)
+* [BEACO2N](http://beacon.berkeley.edu/about/)
